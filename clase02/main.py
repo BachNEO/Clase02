@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from datetime import datetime
 from routes.servicios import router as servicios_router
 from routes.auth import router as auth_router
+from routes.mascotas import router as mascotas_router
 
 app = FastAPI()
 
@@ -25,3 +26,4 @@ def dame_la_hora():
 # Incluir los routers
 app.include_router(servicios_router)
 app.include_router(auth_router)
+app.include_router(mascotas_router)
