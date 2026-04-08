@@ -2,10 +2,12 @@ FROM python:3.12-slim
 
 WORKDIR /app
 
-COPY requirements.txt .
+# Copiar requirements desde la carpeta clase02
+COPY clase02/requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY . .
+# Copiar todo desde la carpeta clase02
+COPY clase02/ .
 
 EXPOSE 8080
 
